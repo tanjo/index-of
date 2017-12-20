@@ -11,7 +11,7 @@ python main.py
 ```
 or
 ```sh
-python main.py /
+python main.py ../hoge
 ```
 
 ## Artifacts
