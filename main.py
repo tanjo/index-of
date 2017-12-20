@@ -16,7 +16,7 @@ def main():
 def explorer(next):
     print(next)
     makeIndex(next)
-    list = filter(lambda x: x not in ["directory_index.py", "index.html", ".DS_Store"], os.listdir(next))
+    list = filter(lambda x: x not in ["directory_index.py", "index.html", ".DS_Store", ".git"], os.listdir(next))
     for x in list:
       p = os.path.abspath(next + '/' + x)
       if os.path.isdir(p):
@@ -24,13 +24,13 @@ def explorer(next):
 
 def makeLink(dir, space):
     body = ''
-    list = filter(lambda x: x not in ["directory_index.py", "index.html", ".DS_Store"], os.listdir(dir))
+    list = filter(lambda x: x not in ["directory_index.py", "index.html", ".DS_Store", ".git"], os.listdir(dir))
     for x in list:
         p = os.path.abspath(dir + '/' + x)
         for y in range(0, space):
             body += ' '
         if os.path.isdir(p):
-          body += '<a href="' + x + '/index.html">' + x + '</a>\n'
+          body += '<a href="' + x + '/index.html">' + x + '/</a>\n'
         else:
           body += '<a href="' + x + '">' + x + '</a>\n'
     return body
