@@ -29,3 +29,10 @@ python main.py ../hoge
  </body>
 </html>
 ```
+
+## Download & Run
+
+```sh
+curl -o directory_index.py https://raw.githubusercontent.com/tanjo/index-of/master/main.py
+python directory_index.py
+```
